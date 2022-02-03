@@ -1,6 +1,5 @@
 import { Link, useLocation, useParams, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
-import { useEffect, useState } from "react";
 import { Switch, Route } from "react-router";
 import Chart from "./Chart";
 import Price from "./Price";
