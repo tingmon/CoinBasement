@@ -229,7 +229,7 @@ function Coin() {
 					<TitleImage
 						src={
 							location.state?.src ||
-							`https://cryptoicon-api.vercel.app/api/icon/${infoData?.symbol.toLowerCase()}`
+							`https://coinicons-api.vercel.app/api/icon/${infoData?.symbol.toLowerCase()}`
 						}
 					/>
 					<Title>
@@ -274,10 +274,10 @@ function Coin() {
 					</Overview>
 					<Tabs>
 						<Tab isActive={chartMatch !== null}>
-							<Link to={`/${coinId}/chart`}>Chart</Link>
+							<Link to={`/${coinId}/chart`}>Line Chart</Link>
 						</Tab>
 						<Tab isActive={priceMatch !== null}>
-							<Link to={`/${coinId}/price`}>Price</Link>
+							<Link to={`/${coinId}/price`}>Candle Stick Chart</Link>
 						</Tab>
 					</Tabs>
 					<Switch>

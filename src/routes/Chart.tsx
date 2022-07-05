@@ -71,7 +71,7 @@ function Chart({ coinId }: IChartProps) {
 						},
 						xaxis: {
 							type: "datetime",
-							categories: data?.map((date) => date.time_close),
+							categories: data?.map((date) => (date.time_close as any) * 1000),
 						},
 						tooltip: {
 							y: {

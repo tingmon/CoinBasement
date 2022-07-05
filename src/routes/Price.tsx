@@ -28,11 +28,13 @@ function Price({ coinId }: IChartProps) {
 		}
 	);
 
-	const date = data?.map((date) => new Date(date.time_close));
+	const date = data?.map((date) => new Date((date.time_close as any) * 1000));
 	const open = data?.map((price) => price.open);
 	const high = data?.map((price) => price.high);
 	const low = data?.map((price) => price.low);
 	const close = data?.map((price) => price.close);
+
+	console.log(data);
 
 	console.log(date);
 	console.log(typeof date);
@@ -94,34 +96,6 @@ function Price({ coinId }: IChartProps) {
 						{
 							data: [
 								{
-									x: date?.at(0),
-									y: [open?.at(0), high?.at(0), low?.at(0), close?.at(0)],
-								},
-								{
-									x: date?.at(1),
-									y: [open?.at(1), high?.at(1), low?.at(1), close?.at(1)],
-								},
-								{
-									x: date?.at(2),
-									y: [open?.at(2), high?.at(2), low?.at(2), close?.at(2)],
-								},
-								{
-									x: date?.at(3),
-									y: [open?.at(3), high?.at(3), low?.at(3), close?.at(3)],
-								},
-								{
-									x: date?.at(4),
-									y: [open?.at(4), high?.at(4), low?.at(4), close?.at(4)],
-								},
-								{
-									x: date?.at(5),
-									y: [open?.at(5), high?.at(5), low?.at(5), close?.at(5)],
-								},
-								{
-									x: date?.at(6),
-									y: [open?.at(6), high?.at(6), low?.at(6), close?.at(6)],
-								},
-								{
 									x: date?.at(7),
 									y: [open?.at(7), high?.at(7), low?.at(7), close?.at(7)],
 								},
@@ -148,6 +122,34 @@ function Price({ coinId }: IChartProps) {
 								{
 									x: date?.at(13),
 									y: [open?.at(13), high?.at(13), low?.at(13), close?.at(13)],
+								},
+								{
+									x: date?.at(14),
+									y: [open?.at(14), high?.at(14), low?.at(14), close?.at(14)],
+								},
+								{
+									x: date?.at(15),
+									y: [open?.at(15), high?.at(15), low?.at(15), close?.at(15)],
+								},
+								{
+									x: date?.at(16),
+									y: [open?.at(16), high?.at(16), low?.at(16), close?.at(16)],
+								},
+								{
+									x: date?.at(17),
+									y: [open?.at(17), high?.at(17), low?.at(17), close?.at(17)],
+								},
+								{
+									x: date?.at(18),
+									y: [open?.at(18), high?.at(18), low?.at(18), close?.at(18)],
+								},
+								{
+									x: date?.at(19),
+									y: [open?.at(19), high?.at(19), low?.at(19), close?.at(19)],
+								},
+								{
+									x: date?.at(20),
+									y: [open?.at(20), high?.at(20), low?.at(20), close?.at(20)],
 								},
 							],
 						},
